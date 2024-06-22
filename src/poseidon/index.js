@@ -30,7 +30,7 @@ function mix(state, M) {
   return out
 }
 
-function poseidon(_inputs, opt) {
+function poseidon(_inputs, opt, domain=0n) {
   const inputs = _inputs.map((i) => BigInt(i))
   if (inputs.length <= 0) {
     throw new Error('poseidon-lite: Not enough inputs')
@@ -50,7 +50,8 @@ function poseidon(_inputs, opt) {
     )
   }
 
-  let state = [0n, ...inputs]
+  
+  let state = [domain, ...inputs]
   for (let x = 0; x < nRoundsF + nRoundsP; x++) {
     for (let y = 0; y < state.length; y++) {
       state[y] = state[y] + C[x * t + y]
