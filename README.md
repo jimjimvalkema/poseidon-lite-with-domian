@@ -10,21 +10,23 @@ This implementation has **not** been audited.
 
 ## Use
 
-`npm i poseidon-lite`
+`npm i poseidon-lite-with-domain`
 
 ```js
-import { poseidon2 } from 'poseidon-lite'
+import { poseidon2 } from 'poseidon-lite-with-domain'
 // pass an array to the function
 // array length must be equal to the function name
 // returns a BigInt
-const hash = poseidon2(['0x01', '0x02'])
+const domain = 512
+const hash = poseidon2(['0x01', '0x02'],domain)
 ```
 
 ### Individual import
 
 ```js
-import { poseidon2 } from 'poseidon-lite/poseidon2'
-const hash = poseidon2(['0x01', '0x02'])
+import { poseidon2 } from 'poseidon-lite-with-domain/poseidon2'
+const domain = 512
+const hash = poseidon2(['0x01', '0x02'],domain)
 ```
 
 ## Build

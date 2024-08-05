@@ -1,13 +1,15 @@
 {
-  "name": "poseidon-lite",
-  "version": "0.2.0",
-  "description": "Lightweight poseidon hash",
+  "name": "poseidon-lite-with-domain",
+  "version": "0.2.1",
+  "description": "modification of poseidon-lite from chancehudson to allow a domain as input",
   "keywords": [
     "poseidon",
     "hash",
-    "zk"
+    "zk",
+    "scroll",
+    "storageproofs"
   ],
-  "homepage": "https://github.com/vimwitch/poseidon-lite#readme",
+  "homepage": "https://github.com/jimjimvalkema/poseidon-lite-with-domian#readme",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
